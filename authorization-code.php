@@ -36,7 +36,7 @@ if ( isset( $_GET['code'] ) ) {
 	/*
 	 * If there is no error in the return, the following will request the user information from the server
 	 */
-	$curl = curl_init( 'https://leoadventures.com/oauth/me/?access_token=' . $tmp->access_token );
+	$curl = curl_init( 'https://leoadventures.com/oauth/testme/?access_token=' . $tmp->access_token );
 
 	curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 	curl_setopt( $curl, CURLOPT_POST, false );
