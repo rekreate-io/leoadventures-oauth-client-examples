@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Below are the constants you should change to match your setup
+ */
 $redirect_uri = 'https://your-url.com/';
 $client_id = '1234567890abcdefghijklmnopqrstuvwxyzABCD';
 $client_secret = '1234567890abcdefghijklmnopqrstuvwxyzABCD';
