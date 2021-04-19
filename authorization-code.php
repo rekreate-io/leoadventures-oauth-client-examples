@@ -16,8 +16,6 @@ if ( isset( $_GET['code'] ) ) {
 
 	$curl = curl_init( 'https://leoadventures.com/oauth/token/' );
 
-	//curl_setopt( $curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC );
-	//curl_setopt( $curl, CURLOPT_USERPWD, $client_id . ':' . $client_secret ); // Your credentials goes here
 	curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 	curl_setopt( $curl, CURLOPT_POST, true );
 	curl_setopt( $curl, CURLOPT_POSTFIELDS, $curl_post_data );
@@ -52,7 +50,7 @@ if ( isset( $_GET['code'] ) ) {
 ?>
 
 <?php if ( ! is_null( $tmp ) ) :
-	
+
 	print '<p>Below is the return from the OAuth Server. This information can be used to request the user information.</p>';
 	print '<pre>';
 	print_r( $tmp );
@@ -64,7 +62,7 @@ if ( isset( $_GET['code'] ) ) {
 	print '</pre>';
 
 	print '<a href="' . $redirect_uri . '">Return to Form</a>';
-	
+
 else : ?>
 
 	<h3>Login Form Example</h3>
@@ -77,5 +75,5 @@ else : ?>
 	         <img id="leoadventures_verification_button" width="350" height="72" alt="LeoAdventures verification button" srcset="https://leoadventures.com/wp-content/uploads/2021/03/Leo-White-350.png 1x, https://leoadventures.com/wp-content/uploads/2021/03/Leo-White-700.png 2x" src="https://leoadventures.com/wp-content/uploads/2021/03/Leo-White-350.png"/>
 	    </button>
 	</form>
-	
+
 <?php endif;
