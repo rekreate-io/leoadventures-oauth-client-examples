@@ -6,6 +6,8 @@ $redirect_uri = 'https://your-url.com/';
 $client_id = '1234567890abcdefghijklmnopqrstuvwxyzABCD';
 $client_secret = '1234567890abcdefghijklmnopqrstuvwxyzABCD';
 
+$tmp = null;
+
 if ( isset( $_GET['code'] ) ) {
 
 	$curl_post_data = array(
